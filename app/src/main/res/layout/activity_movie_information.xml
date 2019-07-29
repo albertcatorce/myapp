@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Activity.MovieInformation">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/image_header"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder2"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/colorPrimary"
+                android:padding="4dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="120dp"
+                    android:layout_height="170dp"
+                    app:cardElevation="6dp">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/placeholder2"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="-50dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cardview"
+                    android:layout_marginLeft="16dp">
+
+
+                    <TextView
+                        android:id="@+id/txt_trackName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:text="trackName"
+                        android:textSize="15sp"
+                        android:textColor="#ffca28"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:id="@+id/txt_genre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_trackName"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="primaryGenreName"
+                        android:layout_marginBottom="3dp"
+                        android:padding="6dp"
+                        android:background="@drawable/bg_rounded"
+                        android:textColor="@color/colorWhite"/>
+
+                    <TextView
+                        android:id="@+id/txt_releaseDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_genre"
+                        android:fontFamily="@font/open_sans"
+                        android:text="price"
+                        android:textSize="12sp"
+                        android:padding="6dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/bg_rounded"
+                        android:layout_marginBottom="3dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_releaseDate"
+                        android:fontFamily="@font/open_sans"
+                        android:textSize="12sp"
+                        android:padding="6dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/bg_rounded"
+                        android:layout_marginBottom="3dp"
+                        android:text="price" />
+
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_country"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:text="price"
+                        android:textSize="15sp"
+                        android:padding="6dp"
+                        android:textColor="@color/colorWhite"
+                        android:background="@drawable/bg_rounded" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btn_addFav"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/hearton"
+                android:layout_gravity="right"
+                android:scaleType="centerInside"
+                android:elevation="6dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="-20dp"
+                android:background="#00FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="-35dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Description"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt_longDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/open_sans_light"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/lorem" />
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

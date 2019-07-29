@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/placeholder2"
+            android:scaleType="centerCrop" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorAccent"
+            android:padding="4dp">
+
+
+            <TextView
+                android:id="@+id/trackName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="bbxdlnvc"
+                android:textSize="12sp"
+                android:textColor="@color/colorWhite"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id="@+id/primaryGenreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/open_sans"
+                android:text="bbxdlnvc"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/collectionPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="$9.99"
+                    android:textSize="12dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_gravity="right"/>
+
+                <ImageView
+                    android:id="@+id/btn_fav"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/hearton"
+                    android:visibility="gone"
+                    android:scaleType="centerInside"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
